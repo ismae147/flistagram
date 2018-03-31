@@ -1,0 +1,9 @@
+.container{
+  background: blue;
+  display: flex;
+  justify-content: center;
+  .container__content{
+    display: flex;
+    width: 50%;
+  }
+}
