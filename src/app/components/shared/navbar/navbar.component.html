@@ -1,13 +1,18 @@
-<div class="ui three column grid navbarMain">
-  <div class="column">
-    <div class="logo">
+<div class="navbar">
+  <div class="navbar__container">
+    <div class="column logo">
       <div class="logo__container">
-        Flistagram
+        <a [routerLink]="['home']"> Flistagram</a>
       </div>
     </div>
-  </div>
-  <div class="column">
-  </div>
-  <div class="column">
+    <div class="column">
+      <div class="ui icon input">
+        <i class="ion-ios-search icon"></i>
+        <input type="text" placeholder="Buscar...">
+      </div>
+    </div>
+    <div class="column links">
+      <a [routerLink]="['user',3]"><i class="ion-ios-person-outline"></i></a>
+    </div>
   </div>
 </div>
