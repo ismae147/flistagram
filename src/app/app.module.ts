@@ -10,11 +10,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { SearchComponent } from './components/shared/search/search.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { UserComponent } from './components/user/user.component';
+import { ProfileTimeLinePhotoComponent } from './components/profile-time-line-photo/profile-time-line-photo.component';
 
 import {app_routing} from './app.routes';
-import { MainComponent } from './components/shared/main/main.component';
-import { GComponent } from './components/g/g.component';
-import { ProfileTimeLinePhotoComponent } from './components/profile-time-line-photo/profile-time-line-photo.component';
 
 @NgModule({
   declarations: [
