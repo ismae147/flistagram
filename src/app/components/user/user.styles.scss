@@ -1,9 +1,50 @@
 .container{
-  background: blue;
+  a{
+    color:black;
+  }
+  font-family: 'Roboto', sans-serif;
+  background: #FAFAFA;
   display: flex;
   justify-content: center;
   .container__content{
     display: flex;
-    width: 50%;
+    max-width: 935px;
+    width:100%;
+    justify-content: space-between;
+    padding: 50px;
+    .content__avatar{
+      .avatar__img-photo {
+        border-radius: 50%;
+      }
+    }
+    .content__info-user{
+      flex-direction: column;
+
+      width: 600px;
+      align-items: center;
+      font-size: 20px;
+      .info-user__name-user{
+      ;
+        padding-bottom: 25px;
+      }
+      .info-user__data{
+        display: flex;
+
+        justify-content: flex-start;
+        justify-content: space-between;
+        padding-right: 151px;
+
+        padding-bottom: 25px;
+        .data__publications{
+          display: flex;
+          justify-content: space-around;
+        }
+
+      }
+      .info-user__full-name{
+
+      }
+
+    }
   }
 }
