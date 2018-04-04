@@ -3,21 +3,18 @@
   justify-content: center;
   background: #FAFAFA;
   .main__container{
-    background: red;
+    padding-top: 44px;
     max-width: 935px;
     width: 100%;
-
     .container__user-container{
       padding-bottom: 44px;
       display: flex;
      align-items: center;
-
       justify-content: space-between;
       .user-container__photo-container{
         height: 152px;
         width: 152px;
         width: 300px;
-        background: blue;
         display: flex;
         justify-content: center;
         margin-right: 30px;
@@ -28,13 +25,12 @@
       }
       .user-container__data-user{
         width: calc(100% - 300px);
-        background: green;
+
         .data-user__name-user{
           padding-bottom: 20px;
         }
         .data-user__data-items{
           display: flex;
-          background: yellow;
           margin: 0px auto 20px 0px;
           padding-left: 0px;
 
