@@ -1,4 +1,15 @@
-.a{
-  display: block;
-  background: skyblue;
+.profile_photo{
+  .profile-photo__container-row{
+    display: flex;
+    justify-content: space-between;
+    .profile-photo__container-photo{
+      padding-bottom: 20px;
+
+      img{
+        --photo-size:293px;
+        width: var( --photo-size);
+        height:var( --photo-size);
+      }
+    }
+  }
 }
