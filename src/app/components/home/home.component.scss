@@ -34,17 +34,52 @@
         }
       }
       .article-publication__publication-photo{
-        background: red;
+
         .container-photo__link-img{
           height: 100%;
           width: 100%;
           .publication-photo__img{
             width: 100%;
             height: auto;
+          }
+
+        }
+      }
+      .article-publication__data-publication{
+
+        padding-left: 16px;
+        .data-publication__data-container{
+          ;
+
+          .likes-and-comments{
+            display: flex;
+            width: 100%;
+
+            .like-container{
+              width: 30px;
+              height: 30px;
+
+              display: flex;
+              justify-content: center;
+              .icon-size{
+                font-size: 30px;
+              }
+              .red-like:hover{
+                color: red;
+                cursor: pointer;
+              }
+            }
+            .icon-comments{
+              margin-left: 20px;
+              &:hover{
+                color :deepskyblue;
+                cursor: pointer;
+
+              }
+            }
 
           }
         }
-
       }
     }
   }
