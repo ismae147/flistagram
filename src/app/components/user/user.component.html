@@ -3,7 +3,10 @@
   <div class="main__container">
     <header class="container__user-container">
       <div class="user-container__photo-container">
-        <img src="assets/images/avatar.jpg" alt="" class="photo-avatar">
+        <div class="photo-container__img-container">
+          <img src="assets/images/avatar.jpg" alt="" class="photo-avatar">
+        </div>
+
       </div>
       <div class="user-container__data-user">
         <div class="data-user__name-user">
@@ -14,7 +17,7 @@
             20 publicaciones
           </li>
           <li class="data-items__item-data">
-            4 <a href="" class="item-data__link">seguidores</a>
+            4 <a [routerLink]="['home']"class="item-data__link">seguidores</a>
           </li>
           <li class="data-items__item-data">
             15 <a href="" class="item-data__link">seguidos</a>

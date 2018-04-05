@@ -13,6 +13,7 @@ import { UserComponent } from './components/user/user.component';
 import { ProfileTimeLinePhotoComponent } from './components/profile-time-line-photo/profile-time-line-photo.component';
 
 import {app_routing} from './app.routes';
+import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {app_routing} from './app.routes';
     SearchComponent,
     TimelineComponent,
     UserComponent,
-    ProfileTimeLinePhotoComponent
+    ProfileTimeLinePhotoComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,16 +14,21 @@
       justify-content: space-between;
       font-size: 30px;
       .user-container__photo-container{
-        height: 152px;
-        width: 152px;
         width: 300px;
         display: flex;
         justify-content: center;
         margin-right: 30px;
-        .photo-avatar{
-          border-radius: 50%;
+        .photo-container__img-container{
+          height: 152px;
 
+          width: 152px;
+          .photo-avatar{
+            border-radius: 50%;
+            width:100%; height:100%
+
+          }
         }
+
       }
       .user-container__data-user{
         width: calc(100% - 300px);
