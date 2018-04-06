@@ -1,3 +1,44 @@
-<div class="container">
-  Este es upload photo
-</div>
+<main class="main">
+  <div class="main__container">
+    <article class="container__article">
+      <div class="article__upload-photo">
+        <div class="txt-btn-new-publication">
+          <div class="txt-new-publication">
+            <h3>Nueva Publicación</h3>
+          </div>
+          <div class="btn-new-publication">
+            <a class="ui button link_button">
+              <i class="ion-image icon-photo"></i>
+             Subir Foto
+            </a>
+          </div>
+        </div>
+
+        <div class="photo-container">
+          <div class="photo">
+            <img src="assets/images/uploadPhoto.png" class="img-upload" alt="">
+          </div>
+        </div>
+
+      </div>
+      <div class="article__info-photo">
+        <div class="ui form">
+          <div class="field">
+            <label>Comenta!!</label>
+            <textarea></textarea>
+          </div>
+          <div class="field">
+            <label>Ubicación</label>
+            <textarea rows="2"></textarea>
+          </div>
+        </div>
+        <div class="btn-comment-location">
+          <a [routerLink]="['/user','upload',3]" class="ui button link_button">
+            <h4 class="change-photo">Publicar</h4>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+</main>

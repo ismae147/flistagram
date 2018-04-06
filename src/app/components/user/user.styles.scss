@@ -3,7 +3,7 @@
   justify-content: center;
   background: #FAFAFA;
 
-  .main__container{
+  &__container{
     padding-top: 44px;
     max-width: 935px;
     width: 100%;
@@ -40,22 +40,27 @@
             width: 250px;
 
           }
-         /* .buttons{
+          .buttons{
             width: calc(100% - 250px);
+            text-decoration: none;
             .button-close-session{
               background: #F1D1CB;
               font-size: 18px;
               color: #646870;
+
               &:hover {
                 background: #D6715C;
-                color: white;
+
               }
             }
             .button-animate{
               font-size: 18px;
               color: #646870;
+              .link_button{
+                color:#646870;
+              }
             }
-          }*/
+          }
         }
         .data-user__data-items{
           display: flex;
@@ -73,7 +78,7 @@
           }
         }
         .data-user__full-name{
-         /* .button-animate{
+         .button-animate{
             display:block;
             justify-content: center;
             background: #B3C9F6;
@@ -83,7 +88,7 @@
               background: #0d71bb;
               color: white;
             }
-          }*/
+          }
         }
 
       }
