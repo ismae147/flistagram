@@ -24,6 +24,7 @@ import { UploadPhotoComponent } from './components/upload-photo/upload-photo.com
     TimelineComponent,
     UserComponent,
     ProfileTimeLinePhotoComponent,
+    UploadPhotoComponent,
   ],
   imports: [
     BrowserModule,

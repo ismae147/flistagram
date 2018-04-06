@@ -33,8 +33,29 @@
       .user-container__data-user{
         width: calc(100% - 300px);
 
-        .data-user__name-user{
+        .data-user__id{
           padding-bottom: 20px;
+          display: flex;
+          .name-user{
+            width: 250px;
+
+          }
+         /* .buttons{
+            width: calc(100% - 250px);
+            .button-close-session{
+              background: #F1D1CB;
+              font-size: 18px;
+              color: #646870;
+              &:hover {
+                background: #D6715C;
+                color: white;
+              }
+            }
+            .button-animate{
+              font-size: 18px;
+              color: #646870;
+            }
+          }*/
         }
         .data-user__data-items{
           display: flex;
@@ -51,6 +72,20 @@
 
           }
         }
+        .data-user__full-name{
+         /* .button-animate{
+            display:block;
+            justify-content: center;
+            background: #B3C9F6;
+            font-size: 18px;
+            color: #646870;
+            &:hover{
+              background: #0d71bb;
+              color: white;
+            }
+          }*/
+        }
+
       }
     }
   }

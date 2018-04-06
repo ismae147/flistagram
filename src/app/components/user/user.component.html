@@ -9,8 +9,20 @@
 
       </div>
       <div class="user-container__data-user">
-        <div class="data-user__name-user">
-          <p>richandrb1977</p>
+        <div class="data-user__id">
+          <div class="name-user">
+            <p>richandrb1977</p>
+          </div>
+
+          <div class="buttons">
+            <div class="ui button button-animate">
+              <a [routerLink]="['user','upload',3]" > <strong>Nueva Publicación</strong></a>
+            </div>
+            <div class="ui button button-animate button-close-session">
+              <a [routerLink]="['user','upload',3]"> <strong>Nueva Publicación</strong></a>
+            </div>
+          </div>
+
         </div>
         <ul class="data-user__data-items">
           <li class="data-items__item-data">
@@ -25,6 +37,9 @@
         </ul>
         <div class="data-user__full-name">
           <h3>Richard Ramos Benites</h3>
+          <a [routerLink]="['user','upload',3]" > <strong>Nueva Publicación</strong></a>
+
+          </a>
         </div>
       </div>
     </header>
