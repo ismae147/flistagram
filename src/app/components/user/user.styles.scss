@@ -43,6 +43,9 @@
           .buttons{
             width: calc(100% - 250px);
             text-decoration: none;
+            display:flex;
+            justify-content:space-between ;
+            padding-left: 2em;
             .button-close-session{
               background: #F1D1CB;
               font-size: 18px;

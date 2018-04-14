@@ -15,7 +15,7 @@
 
           <div class="buttons">
             <div class="ui button button-animate">
-                <a [routerLink]="['/user','upload',3]" class="link_button" > <strong>Ajustes</strong></a>
+                <a [routerLink]="['/user','settings',3]" class="link_button" > <strong>Ajustes</strong></a>
             </div>
             <div class="ui button button-animate button-close-session">
                <a [routerLink]="['user','upload',3]" class="link_button"> <strong>Cerrar Sesión</strong></a>
@@ -41,7 +41,9 @@
         </div>
       </div>
     </header>
-    <app-profile-time-line-photo></app-profile-time-line-photo>
+    <app-profile-time-line-photo>
+
+    </app-profile-time-line-photo>
 
   </div>
 </main>

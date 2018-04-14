@@ -35,24 +35,13 @@
           }
         }
       }
-      .article-publication__publication-photo{
 
-        .container-photo__link-img{
-          height: 100%;
-          width: 100%;
-          .publication-photo__img{
-            width: 100%;
-            height: auto;
-          }
-
-        }
-      }
       .article-publication__data-publication{
         --padding:16px;
         padding-left: var(--padding);
         padding-right: var(--padding);
         .data-publication__data-container{
-          ;
+
 
           .likes-and-comments{
             display: flex;

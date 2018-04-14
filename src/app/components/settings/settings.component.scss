@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  justify-content: center;
+  background: #FAFAFA;
+  height: auto;
+  &__container {
+    justify-content: center;
+    padding-top: 44px;
+    .container__article {
+      width: 900px;
+      background: #FFFFFF;
+      border-radius: 3px;
+      border: 1px solid #e6e6e6;
+      margin-bottom: 44px;
+      display: flex;
+      .article__colum-left{
+        width: 240px;
+        background: red;
+        .container-edit-profile{
+          padding: 16px 16px 16px 30px;
+        }
+      }
+
+    }
+
+  }
+}
+

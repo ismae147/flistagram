@@ -14,6 +14,12 @@ import { ProfileTimeLinePhotoComponent } from './components/profile-time-line-ph
 
 import {app_routing} from './app.routes';
 import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { LoginComponent } from './components/login/login.component';
+import { AppComponentsLoginComponent } from './app-components-login/app-components-login.component';
+
+
 
 @NgModule({
   declarations: [
@@ -25,6 +31,12 @@ import { UploadPhotoComponent } from './components/upload-photo/upload-photo.com
     UserComponent,
     ProfileTimeLinePhotoComponent,
     UploadPhotoComponent,
+    SettingsComponent,
+    EditProfileComponent,
+    LoginComponent,
+    AppComponentsLoginComponent,
+
+
   ],
   imports: [
     BrowserModule,
