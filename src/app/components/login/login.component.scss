@@ -47,50 +47,7 @@
             font-size: 1.4em;
           }
         }
-        .container-right {
-          width: 50%;
-          .color-form {
-            background: transparent;
 
-          }
-          .recover-pass {
-            font-size: 1.2em;
-            p {
-              margin-bottom: 5px;
-              display: flex;
-              justify-content: center;
-              color: white;
-            }
-            a {
-              padding-bottom: 12px;
-              color: midnightblue;
-              display: flex;
-              justify-content: center;
-            }
-          }
-          .start-fb {
-            a {
-              margin-top: 21px;
-              display: flex;
-              justify-content: center;
-              color: white;
-              font-weight: bold;
-              font-size: 20px;
-            }
-          }
-          .not-account {
-            padding-top: 40px;
-            display: flex;
-            justify-content: center;
-            p {
-              font-weight: bold;
-            }
-            a {
-              color: white;
-            }
-          }
-
-        }
       }
       .container-copyright {
         color: white;
@@ -109,5 +66,7 @@
     right: 0;
     color: white;
     text-align: center;
+    font-size: 25px;
+    font-weight: bold;
   }
 }
