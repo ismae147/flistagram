@@ -13,11 +13,73 @@
             <p>Comparte fotos, sigue a personas que desees</p>
           </div>
         </div>
-        <app-input-login></app-input-login>
+        <div class="container-right login" *ngIf="!register">
+          <form class="ui large form">
+            <div class="ui stacked segment color-form">
+              <div class="field">
+                <div class="ui left icon input">
+                  <i class="ion-person icon"></i>
+                  <input type="text" name="text" placeholder="Nombre de usuario">
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui left icon input">
+                  <i class="ion-locked icon"></i>
+                  <input type="password" name="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="ui fluid large orange submit button">Iniciar Sesión</div>
+            </div>
+            <hr width="200px">
+            <div class="not-account">
+              ¿No tienes una cuenta? &nbsp;| <span (click)="setRegister(true)">Registrarse</span>
+            </div>
+          </form>
+        </div>
+        <div class="container-right" *ngIf="register">
+          <form class="ui large form">
+            <div class="ui stacked segment color-form">
+              <div class="field">
+                <div class="ui left icon input">
+
+                  <input type="text" name="text" placeholder="Nombre">
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui left icon input">
+
+                  <input type="text" name="text" placeholder="Nombre de usuario">
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui left icon input">
+
+                  <input type="text" name="email" placeholder="Email">
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui left icon input">
+
+                  <input type="text" name="text" placeholder="Número de celular">
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui left icon input">
+
+                  <input type="password" name="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="ui fluid large orange submit button">Registrar</div>
+            </div>
+            <div class="recover-pass">
+              ¿Tienes cuenta? &nbsp;| <span (click)="setRegister(false)">Iniciar sesión</span>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
   <div class="container-copyright">
-    <p> &#9400; Flisol</p>
+    <p> &#9400; Flisol 2018 - UNPRG</p>
   </div>
 </div>

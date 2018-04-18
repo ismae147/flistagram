@@ -69,4 +69,44 @@
     font-size: 25px;
     font-weight: bold;
   }
+
 }
+
+.container-right {
+  width: calc(935px / 2);
+  .color-form {
+    background: transparent;
+  }
+  .recover-pass {
+    font-size: 1.2em;
+    p {
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: center;
+      color: white;
+    }
+    a {
+      padding-bottom: 12px;
+      color: midnightblue;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .not-account, .recover-pass {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 13pt;
+    p {
+      font-weight: bold;
+    }
+    span {
+      color: white;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+}
+
