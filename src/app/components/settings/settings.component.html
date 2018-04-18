@@ -3,7 +3,7 @@
     <article class="container__article">
       <div class="article__colum-left">
         <div class="ui primary vertical pointing menu">
-          <a [routerLink]="['user','settings','edit-profile',3]" class="item">
+          <a onclick="setRegister(false)" class="item">
               Editar Perfil
           </a>
           <a class="item active">
@@ -14,7 +14,7 @@
           </a>
         </div>
       </div>
-      <div class="article__container-right">
+      <div *ngIf="editProfile"  class="article__container-right">
 
       </div>
     </article>

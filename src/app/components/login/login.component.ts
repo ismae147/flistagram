@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  setRegister( value = false ){
+  setRegister( value= false ) {
     this.register = value;
   }
 

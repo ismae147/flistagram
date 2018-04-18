@@ -19,7 +19,6 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { LoginComponent } from './components/login/login.component';
 import { AppComponentsLoginComponent } from './app-components-login/app-components-login.component';
 import { InputLoginComponent } from './components/input-login/input-login.component';
-import { RegisterLoginComponent } from './components/register-login/register-login.component';
 
 
 
@@ -39,9 +38,7 @@ import { RegisterLoginComponent } from './components/register-login/register-log
     LoginComponent,
     AppComponentsLoginComponent,
     InputLoginComponent,
-    RegisterLoginComponent,
-
-
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
-
+  editProfile = false;
   constructor() { }
 
   ngOnInit() {
   }
+  setEditProfile(value = false) {
+    this.editProfile = value;
+  }
+
 
 }
+
