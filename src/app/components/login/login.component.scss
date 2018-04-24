@@ -1,7 +1,7 @@
 
 .container-general {
   height: 100%;
-  background-image: url(assets/images/fondo.jpg);
+  background-image: url('assets/images/fondo.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -27,7 +27,9 @@
         .container-left {
           color: white;
           width: 50%;
-
+          @media (max-width: 768px) {
+            display: none;
+          }
           .logo__container {
             font-family: 'Kaushan Script', cursive;
             font-size: 25pt;
@@ -74,6 +76,12 @@
 
 .container-right {
   width: calc(935px / 2);
+
+  @media(max-width: 768px) {
+    width: 100%;
+    margin: 0 30px;
+  }
+
   .color-form {
     background: transparent;
   }

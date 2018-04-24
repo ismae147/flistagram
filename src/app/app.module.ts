@@ -1,27 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { SearchComponent } from './components/shared/search/search.component';
-import { TimelineComponent } from './components/timeline/timeline.component';
-import { UserComponent } from './components/user/user.component';
-import { ProfileTimeLinePhotoComponent } from './components/profile-time-line-photo/profile-time-line-photo.component';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './components/home/home.component';
+import {NavbarComponent} from './components/shared/navbar/navbar.component';
+import {SearchComponent} from './components/shared/search/search.component';
+import {TimelineComponent} from './components/timeline/timeline.component';
+import {UserComponent} from './components/user/user.component';
+import {ProfileTimeLinePhotoComponent} from './components/profile-time-line-photo/profile-time-line-photo.component';
 
 import {app_routing} from './app.routes';
-import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
-import { LoginComponent } from './components/login/login.component';
-import { AppComponentsLoginComponent } from './app-components-login/app-components-login.component';
-import { InputLoginComponent } from './components/input-login/input-login.component';
-
-
-
+import {UploadPhotoComponent} from './components/upload-photo/upload-photo.component';
+import {SettingsComponent} from './components/settings/settings.component';
+import {EditProfileComponent} from './components/edit-profile/edit-profile.component';
+import {LoginComponent} from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +31,6 @@ import { InputLoginComponent } from './components/input-login/input-login.compon
     SettingsComponent,
     EditProfileComponent,
     LoginComponent,
-    AppComponentsLoginComponent,
-    InputLoginComponent,
     LoginComponent,
   ],
   imports: [
@@ -49,4 +42,5 @@ import { InputLoginComponent } from './components/input-login/input-login.compon
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
