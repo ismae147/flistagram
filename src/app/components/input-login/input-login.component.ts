@@ -15,5 +15,4 @@ export class InputLoginComponent implements OnInit {
   openRegister(id){
 
   }
-
 }
