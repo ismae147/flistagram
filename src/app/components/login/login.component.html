@@ -14,21 +14,29 @@
           </div>
         </div>
         <div class="container-right login" *ngIf="!register">
-          <form class="ui large form">
+          <form class="ui large form" #loginForm="ngForm" (submit)="onSubmitLogin(loginForm)">
             <div class="ui stacked segment color-form">
               <div class="field">
                 <div class="ui left icon input">
                   <i class="ion-person icon"></i>
-                  <input type="text" name="text" placeholder="Nombre de usuario">
+                  <input type="text" name="username" #username="ngModel" [(ngModel)]="userLogin.username" required
+                         placeholder="Nombre de usuario">
+                  <span *ngIf="!username.valid && username.touched">
+                    El nombre de usuario es requerido
+                  </span>
                 </div>
               </div>
               <div class="field">
                 <div class="ui left icon input">
                   <i class="ion-locked icon"></i>
-                  <input type="password" name="password" placeholder="Password">
+                  <input type="password" name="password" placeholder="Password" #password="ngModel"
+                         [(ngModel)]="userLogin.password" required>
+                  <span *ngIf="!password.valid && password.touched">
+                   La contraseña es requerida
+                  </span>
                 </div>
               </div>
-              <div class="ui fluid large orange submit button">Iniciar Sesión</div>
+              <input type="submit" value="Iniciar Sesión" class="ui fluid large orange submit button">
             </div>
             <hr width="200px">
             <div class="not-account">
@@ -37,39 +45,34 @@
           </form>
         </div>
         <div class="container-right" *ngIf="register">
-          <form class="ui large form">
+          <form class="ui large form" #registerForm="ngForm" (submit)="onSubmitRegister(registerForm)">
             <div class="ui stacked segment color-form">
               <div class="field">
                 <div class="ui left icon input">
-
-                  <input type="text" name="text" placeholder="Nombre">
+                  <input type="text" name="name" #name="ngModel"
+                         [(ngModel)]="userRegister.name" required placeholder="Nombre">
                 </div>
               </div>
               <div class="field">
                 <div class="ui left icon input">
-
-                  <input type="text" name="text" placeholder="Nombre de usuario">
+                  <input type="text" name="username" #username="ngModel"
+                         [(ngModel)]="userRegister.username" required placeholder="Nombre de usuario">
                 </div>
               </div>
               <div class="field">
                 <div class="ui left icon input">
-
-                  <input type="text" name="email" placeholder="Email">
+                  <input type="email" name="email" #email="ngModel"
+                         [(ngModel)]="userRegister.email" required placeholder="Email">
                 </div>
               </div>
+
               <div class="field">
                 <div class="ui left icon input">
-
-                  <input type="text" name="text" placeholder="Número de celular">
+                  <input type="password" name="password" #password="ngModel"
+                         [(ngModel)]="userRegister.password" required placeholder="Password">
                 </div>
               </div>
-              <div class="field">
-                <div class="ui left icon input">
-
-                  <input type="password" name="password" placeholder="Password">
-                </div>
-              </div>
-              <div class="ui fluid large orange submit button">Registrar</div>
+              <input type="submit" value="Registrar" class="ui fluid large orange submit button">
             </div>
             <div class="recover-pass">
               ¿Tienes cuenta? &nbsp;| <span (click)="setRegister(false)">Iniciar sesión</span>
