@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FlistagramService} from "../../../services/flistagram.service";
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class NavbarComponent implements OnInit {
+  entity;
 
-  constructor() { }
+  constructor(public  _flistagramService: FlistagramService
+  ) {
+  }
 
   ngOnInit() {
+    this.entity = this._flistagramService.getIdentity();
   }
 }

@@ -1,0 +1,30 @@
+<form class="ui large form" #registerForm="ngForm" (submit)="onSubmitRegister(registerForm)">
+  <div class="ui stacked segment color-form">
+    <div class="field">
+      <div class="ui left icon input">
+        <input type="text" name="name" #name="ngModel"
+               [(ngModel)]="userRegister.name" required placeholder="Nombre">
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui left icon input">
+        <input type="text" name="username" #username="ngModel"
+               [(ngModel)]="userRegister.username" required placeholder="Nombre de usuario">
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui left icon input">
+        <input type="email" name="email" #email="ngModel"
+               [(ngModel)]="userRegister.email" required placeholder="Email">
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="ui left icon input">
+        <input type="password" name="password" #password="ngModel"
+               [(ngModel)]="userRegister.password" required placeholder="Password">
+      </div>
+    </div>
+    <input type="submit" value="Registrar" class="ui fluid large orange submit button">
+  </div>
+</form>

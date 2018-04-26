@@ -1,0 +1,29 @@
+
+  <form class="ui large form" #loginForm="ngForm" (submit)="onSubmitLogin(loginForm)">
+    <div class="ui stacked segment color-form">
+      <div class="field">
+        <div class="ui left icon input">
+          <i class="ion-person icon"></i>
+          <input type="text" name="username" #username="ngModel" [(ngModel)]="userLogin.username" required
+                 placeholder="Nombre de usuario">
+    <!--      <span *ngIf="!username.valid && username.touched">
+                    El nombre de usuario es requerido
+                  </span>-->
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui left icon input">
+          <i class="ion-locked icon"></i>
+          <input type="password" name="password" placeholder="Password" #password="ngModel"
+                 [(ngModel)]="userLogin.password" required>
+<!--          <span *ngIf="!password.valid && password.touched">
+                   La contraseña es requerida
+                  </span>-->
+        </div>
+      </div>
+      <input type="submit" value="Iniciar Sesión" class="ui fluid large orange submit button">
+    </div>
+    <hr width="200px">
+
+  </form>
+

@@ -13,10 +13,13 @@ import {UserComponent} from './components/user/user.component';
 import {ProfileTimeLinePhotoComponent} from './components/profile-time-line-photo/profile-time-line-photo.component';
 
 import {app_routing} from './app.routes';
-import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import {UploadPhotoComponent} from './components/upload-photo/upload-photo.component';
+import {SettingsComponent} from './components/settings/settings.component';
+import {EditProfileComponent} from './components/edit-profile/edit-profile.component';
 import {FlistagramService} from "./services/flistagram.service";
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +33,8 @@ import {FlistagramService} from "./services/flistagram.service";
     UploadPhotoComponent,
     SettingsComponent,
     EditProfileComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
