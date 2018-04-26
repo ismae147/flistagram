@@ -21,6 +21,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import {PublicationService} from "./services/publication.service";
 import { PublicationComponent } from './components/publication/publication.component';
+import { PublicationPageComponent } from './components/publication-page/publication-page.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { PublicationComponent } from './components/publication/publication.compo
     LoginComponent,
     RegisterComponent,
     PublicationComponent,
+    PublicationPageComponent,
   ],
   imports: [
     BrowserModule,

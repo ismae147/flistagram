@@ -5,7 +5,6 @@
         <div class="photo-container__img-container">
           <img *ngIf="profile.path_photo !== '' " [src]="getURLPhoto(profile.path_photo)" alt="" class="photo-avatar">
         </div>
-
       </div>
       <div class="user-container__data-user">
         <div class="data-user__id">
@@ -36,7 +35,7 @@
     <div class="profile_photo">
       <div class="profile-photo__container-row">
         <div class="profile-photo__container-photo" *ngFor="let publication of profile.publications">
-          <a href="" class="container-photo__link-img">
+          <a [routerLink]="['/publication', publication.id_publication]" class="container-photo__link-img">
             <img [src]="getURLPhoto(publication.photo.public_path)" alt="">
           </a>
         </div>

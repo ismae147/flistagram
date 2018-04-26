@@ -1,25 +1,25 @@
-.container__article-publication{
-  width: 640px;
+.container__article-publication {
   background: #FFFFFF;
   border-radius: 3px;
   border: 1px solid #e6e6e6;
   padding-bottom: 16px;
   margin-bottom: 44px;
-  .article-publication__header-publication{
+  position: relative;
+  .article-publication__header-publication {
     height: 60px;
     padding: 16px;
     display: flex;
-    .header-publication__perfil{
+    .header-publication__perfil {
       display: flex;
       align-items: center;
-      .perfil__user-photo{
-        --size-photo:40px;
+      .perfil__user-photo {
+        --size-photo: 40px;
         width: var(--size-photo);
         height: var(--size-photo);
         margin-right: 20px;
         .photo {
-          width:100%;
-          height:100%;
+          width: 100%;
+          height: 100%;
           border-radius: 50%;
         }
 
@@ -27,46 +27,69 @@
     }
   }
 
-  .article-publication__data-publication{
-    --padding:16px;
+  .article-publication__data-publication {
+    --padding: 16px;
     padding-left: var(--padding);
     padding-right: var(--padding);
-    .data-publication__data-container{
+    .data-publication__data-container {
 
-
-      .likes-and-comments{
+      .likes-and-comments {
         display: flex;
         width: 100%;
         margin-top: 5px;
-        .like-container{
+        .like-container {
           width: 30px;
           height: 30px;
 
           display: flex;
           justify-content: center;
-          .icon-size{
+          .icon-size {
             font-size: 30px;
           }
-          .red-like:hover{
+          .red-like:hover {
             color: red;
             cursor: pointer;
           }
         }
-        .icon-comments{
+        .icon-comments {
           margin-left: 20px;
-          &:hover{
-            color :deepskyblue;
+          &:hover {
+            color: deepskyblue;
             cursor: pointer;
 
           }
         }
       }
-      .many-likes-container{
+      .many-likes-container {
         padding: 5px 5px 5px 0px;
       }
-      .textarea{
+      .textarea {
         height: 56px;
       }
     }
   }
+
+  .mainSection {
+    max-width: 640px;
+  }
+
+  &.publicationPage {
+    display: flex;
+    .mainSection {
+      width: 70%;
+      max-width: inherit;
+    }
+    .article-publication__data-publication {
+      width: 30%;
+      margin-top: 60px;
+    }
+    @media (max-width: 768px) {
+      display: block;
+      .article-publication__data-publication {
+        width: auto;
+        margin-top: 0;
+      }
+    }
+  }
+
 }

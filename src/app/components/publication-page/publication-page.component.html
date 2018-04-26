@@ -1,0 +1,9 @@
+
+<div class="publicationPage">
+  <div class="publicationPage__container">
+    <app-publication *ngIf="publication" [publication]="publication" [customClass]="myClass"></app-publication>
+    <div class="messageError" *ngIf="!publication">
+      No existe la publicacion
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.publicationPage {
+  &__container {
+    width: 70%;
+    margin: 30px auto auto;
+    .messageError{
+      font-size: 25pt;
+      text-align: center;
+    }
+  }
+}
