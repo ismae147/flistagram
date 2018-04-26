@@ -40,4 +40,8 @@ export class PublicationService {
     return this.token;
   }
 
+  timeLine() {
+    const url = `${this.urlFlistagramApi}/publication/timeline`;
+    return this.http.get(url, {headers: this.getHeaders()});
+  }
 }

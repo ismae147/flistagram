@@ -1,14 +1,14 @@
 <main class="main">
   <div class="main__container">
-    <article class="container__article-publication">
+    <article class="container__article-publication"  *ngFor="let publication of publications">
       <!--cabecera de publicacion-->
       <header class="article-publication__header-publication">
         <div class="header-publication__perfil">
           <div class="perfil__user-photo">
-            <img class="photo" src="assets/images/avatar.jpg"  alt="">
+            <img class="photo" [src]="getURLPhoto(publication.user.path_photo)"  alt="">
           </div>
           <div class="perfil__user-name">
-            <h3>edteam</h3>
+            <h3>{{publication.user.username}}</h3>
           </div>
         </div>
       </header>
@@ -17,7 +17,7 @@
       <!--foto de publicacion -->
 
         <a href="#"  style="width:640px" class="container-photo__link-img">
-          <img class="publication-photo__img" style="width:100%; height: auto" src=" assets/images/foto1.jpg" alt="">
+          <img class="publication-photo__img" style="width:100%; height: auto" [src]="getURLPhoto(publication.photo.public_path)" alt="">
         </a>
 
 

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {PublicationService} from "../../services/publication.service";
+import {GLOBAL} from "../../global";
 
 @Component({
   selector: 'app-home',
@@ -8,10 +10,24 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class HomeComponent implements OnInit {
+  publications: any[];
 
-  constructor() { }
+  constructor(
+    public _pulication: PublicationService
+  ) {
+    this._pulication.timeLine().subscribe((data) => {
+      this.publications = data.item;
+    }, (error) => {
+      console.log(error);
+    });
+  }
 
   ngOnInit() {
+
+  }
+
+  getURLPhoto(url): string {
+    return GLOBAL.urlAPI + url;
   }
 
 }

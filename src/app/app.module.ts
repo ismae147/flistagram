@@ -19,6 +19,7 @@ import {EditProfileComponent} from './components/edit-profile/edit-profile.compo
 import {FlistagramService} from "./services/flistagram.service";
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import {PublicationService} from "./services/publication.service";
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import { RegisterComponent } from './components/register/register.component';
     FormsModule
   ],
   providers: [
-    FlistagramService
+    FlistagramService, PublicationService
   ],
   bootstrap: [AppComponent]
 })
