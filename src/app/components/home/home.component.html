@@ -43,35 +43,18 @@
               <div class="many-likes-container">
 
                 <div class="many-likes">
-                21.0000 me gusta
+                {{publication.likes.length}} me gusta
                 </div>
 
               </div>
 
               <!--COMMENTS-SEMANTIC-->
               <div class="ui comments">
-                <div class="comment">
+                <div class="comment" *ngFor="let comment of publication.comments">
                   <div class="content">
-                    <a class="author">Matt</a>
+                    <a [routerLink]="['/user', comment.user.username]" class="author">{{comment.user.username}}</a>
                     <div class="text">
-                      How artistic!
-                    </div>
-
-                  </div>
-                </div>
-                <div class="comment">
-                  <div class="content">
-                    <a class="author">Elliot Fu</a>
-                    <div class="text">
-                      <p>This has been very useful for my research. Thanks as well!</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="comment">
-                  <div class="content">
-                    <a class="author">Joe Henderson</a>
-                    <div class="text">
-                      Dude, this is awesome. Thanks so much
+                      {{comment.text}}
                     </div>
                   </div>
                 </div>
