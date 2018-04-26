@@ -20,6 +20,7 @@ import {FlistagramService} from "./services/flistagram.service";
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import {PublicationService} from "./services/publication.service";
+import { PublicationComponent } from './components/publication/publication.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import {PublicationService} from "./services/publication.service";
     EditProfileComponent,
     LoginComponent,
     RegisterComponent,
+    PublicationComponent,
   ],
   imports: [
     BrowserModule,

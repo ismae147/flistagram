@@ -26,9 +26,6 @@ export class HomeComponent implements OnInit {
 
   }
 
-  getURLPhoto(url): string {
-    return GLOBAL.urlAPI + url;
-  }
 
 
 }

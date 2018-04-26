@@ -1,0 +1,68 @@
+<article class="container__article-publication"  >
+  <!--cabecera de publicacion-->
+  <header class="article-publication__header-publication">
+    <div class="header-publication__perfil">
+      <div class="perfil__user-photo">
+        <img class="photo" [src]="getURLPhoto(publication.user.path_photo)"  alt="">
+      </div>
+      <div class="perfil__user-name">
+        <h3>{{publication.user.username}}</h3>
+      </div>
+    </div>
+  </header>
+  <!--cierre de cabecer de publicacion-->
+  <div class="c"></div>
+  <!--foto de publicacion -->
+
+  <a href="#"  style="width:640px" class="container-photo__link-img">
+    <img class="publication-photo__img" style="width:100%; height: auto" [src]="getURLPhoto(publication.photo.public_path)" alt="">
+  </a>
+
+
+  <!--termino de foto de publicacion-->
+
+
+  <footer class="article-publication__data-publication">
+    <div class="article-publication__publication-photo">
+      <div class="data-publication__data-container">
+
+        <div class="likes-and-comments">
+
+          <div class="like-container">
+            <i class="ion-android-favorite icon-size red-like"></i>
+          </div>
+
+          <div class="like-container icon-comments">
+            <i class="ion-chatbubble-working icon-size blue-comment"></i>
+          </div>
+
+        </div>
+
+        <div class="many-likes-container">
+
+          <div class="many-likes">
+            {{publication.likes.length}} me gusta
+          </div>
+
+        </div>
+
+        <!--COMMENTS-SEMANTIC-->
+        <div class="ui comments">
+          <div class="comment" *ngFor="let comment of publication.comments">
+            <div class="content">
+              <a [routerLink]="['/user', comment.user.username]" class="author">{{comment.user.username}}</a>
+              <div class="text">
+                {{comment.text}}
+              </div>
+            </div>
+          </div>
+          <form class="ui reply form">
+            <div class="field">
+              <textarea (keyup.enter)="commentPhoto()" #comment) class="textarea" placeholder="Escriba su comentario"></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+</article>
