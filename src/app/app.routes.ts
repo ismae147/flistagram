@@ -7,10 +7,10 @@ import {EditProfileComponent} from './components/edit-profile/edit-profile.compo
 
 const APP_ROUTES: Routes = [
   {path: "home", component: HomeComponent},
-  {path: "user/:id", component: UserComponent},
-  {path: "user/upload/:id", component: UploadPhotoComponent},
-  {path: "user/settings/:id", component: SettingsComponent},
-  {path: "user/settings/edit-profile/:id", component: EditProfileComponent},
+  {path: "user/:username", component: UserComponent},
+  {path: "user/upload/:username", component: UploadPhotoComponent},
+  {path: "user/settings/:username", component: SettingsComponent},
+  {path: "user/settings/edit-profile/:username", component: EditProfileComponent},
 
   {path: "", pathMatch: "full", redirectTo: "home"},
   {path: "**", pathMatch: "full", redirectTo: "home"}

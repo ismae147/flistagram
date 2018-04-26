@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {User} from "./models/user";
-import {FlistagramService} from "./services/flistagram.service";
+import {UserService} from "./services/user.service";
 
 @Component({
   selector: 'app-root',
@@ -17,19 +17,19 @@ export class AppComponent implements OnInit {
   constructor(
     public  _route: ActivatedRoute,
     public  _router: Router,
-    public  _flistagramService: FlistagramService
+    public  _userService: UserService
   ) {
   }
 
   ngOnInit() {
-    this.identity = this._flistagramService.getIdentity();
+    this.identity = this._userService.getIdentity();
     if (this.identity == null) {
       this._router.navigate(['/home'], {relativeTo: this._route});
     }
   }
 
   ngDoCheck() {
-    this.identity = this._flistagramService.getIdentity();
+    this.identity = this._userService.getIdentity();
   }
 
   setRegister(value = false) {

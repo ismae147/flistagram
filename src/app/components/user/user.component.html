@@ -1,50 +1,57 @@
 <main class="main">
-  <div class="main__container">
+  <div class="main__container" *ngIf="profile">
     <header class="container__user-container">
       <div class="user-container__photo-container">
         <div class="photo-container__img-container">
-          <img src="assets/images/avatar.jpg" alt="" class="photo-avatar">
+          <img *ngIf="profile.path_photo !== '' " [src]="getURLPhoto(profile.path_photo)" alt="" class="photo-avatar">
         </div>
 
       </div>
       <div class="user-container__data-user">
         <div class="data-user__id">
           <div class="name-user">
-            <p>richandrb1977</p>
+            <p>{{profile.username}}</p>
           </div>
-
-          <div class="buttons">
-            <div class="ui button button-animate">
-              <a [routerLink]="['/user','settings',3]" class="link_button"> <strong>Ajustes</strong></a>
-            </div>
-            <div class="ui button button-animate button-close-session">
-              <a (click)="logout()" class="link_button"> <strong>Cerrar Sesión</strong></a>
-            </div>
-          </div>
-
+          <div class="ui button" *ngIf="!isUserLoggedProfile" (click)="follow()"> Seguir</div>
+          <div class="ui button" *ngIf="isUserLoggedProfile" (click)="logout()"> Cerrar Sesión</div>
         </div>
         <ul class="data-user__data-items">
           <li class="data-items__item-data">
-            20 publicaciones
+            {{profile.publications.length}} publicaciones
           </li>
           <li class="data-items__item-data">
-            4 <a [routerLink]="['home']" class="item-data__link">seguidores</a>
+            {{profile.followers.length}} <a [routerLink]="['home']" class="item-data__link">seguidores</a>
           </li>
           <li class="data-items__item-data">
-            15 <a href="" class="item-data__link">seguidos</a>
+            {{profile.followed.length}} <a href="" class="item-data__link">seguidos</a>
           </li>
         </ul>
-        <div class="data-user__full-name">
-          <h3>Richard Ramos Benites</h3>
+        <div class="data-user__full-name" *ngIf="isUserLoggedProfile">
+          <h3>{{profile.name}}</h3>
           <a [routerLink]="['/user','upload',3]" class="ui button button-animate"> <strong>Nueva Publicación</strong>
           </a>
         </div>
       </div>
     </header>
-    <app-profile-time-line-photo>
+    <div class="profile_photo">
+      <div class="profile-photo__container-row">
+        <div class="profile-photo__container-photo" *ngFor="let publication of profile.publications">
+          <a href="" class="container-photo__link-img">
+            <img [src]="getURLPhoto(publication.photo.public_path)" alt="">
+          </a>
+        </div>
+      </div>
 
-    </app-profile-time-line-photo>
+      <div class="ui visible message" *ngIf="profile.publications.length == 0">
+        <p> No tiene publicaciones
+        </p>
+      </div>
+    </div>
+  </div>
 
+  <div class="ui visible message" *ngIf="!profile">
+    <p> Ese usuario no existe
+    </p>
   </div>
 </main>
 

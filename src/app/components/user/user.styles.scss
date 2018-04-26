@@ -1,52 +1,52 @@
-.main{
+.main {
   display: flex;
   justify-content: center;
   background: #FAFAFA;
 
-  &__container{
+  &__container {
     padding-top: 44px;
     max-width: 935px;
     width: 100%;
-    .container__user-container{
+    .container__user-container {
       padding-bottom: 44px;
       display: flex;
-     align-items: center;
+      align-items: center;
       justify-content: space-between;
       font-size: 30px;
-      .user-container__photo-container{
+      .user-container__photo-container {
         width: 300px;
         display: flex;
         justify-content: center;
         margin-right: 30px;
-        .photo-container__img-container{
+        .photo-container__img-container {
           height: 152px;
-
           width: 152px;
-          .photo-avatar{
-            border-radius: 50%;
-            width:100%; height:100%
-
+          background: #ddd;
+          border-radius: 50%;
+          overflow: hidden;
+          .photo-avatar {
+            width: 100%;
+            height: 100%
           }
         }
-
       }
-      .user-container__data-user{
-        width: calc(100% - 300px);
 
-        .data-user__id{
+      .user-container__data-user {
+        width: calc(100% - 300px);
+        .data-user__id {
           padding-bottom: 20px;
           display: flex;
-          .name-user{
+          .name-user {
             width: 250px;
 
           }
-          .buttons{
+          .buttons {
             width: calc(100% - 250px);
             text-decoration: none;
-            display:flex;
-            justify-content:space-between ;
+            display: flex;
+            justify-content: flex-end;
             padding-left: 2em;
-            .button-close-session{
+            .button-close-session {
               background: #F1D1CB;
               font-size: 18px;
               color: #646870;
@@ -56,44 +56,59 @@
 
               }
             }
-            .button-animate{
+            .button-animate {
               font-size: 18px;
               color: #646870;
-              .link_button{
-                color:#646870;
+              .link_button {
+                color: #646870;
               }
             }
           }
         }
-        .data-user__data-items{
+        .data-user__data-items {
           display: flex;
           margin: 0px auto 20px 0px;
           padding-left: 0px;
 
-          .data-items__item-data{
+          .data-items__item-data {
             list-style: none;
             font-size: 16px;
             margin-right: 40px;
-            .item-data__link{
-              color:#000000;
+            .item-data__link {
+              color: #000000;
             }
 
           }
         }
-        .data-user__full-name{
-         .button-animate{
-            display:block;
+        .data-user__full-name {
+          .button-animate {
+            display: block;
             justify-content: center;
             background: #B3C9F6;
             font-size: 18px;
             color: #646870;
-            &:hover{
+            &:hover {
               background: #0d71bb;
               color: white;
             }
           }
         }
 
+      }
+    }
+  }
+}
+
+.profile_photo {
+  .profile-photo__container-row {
+    display: flex;
+    justify-content: space-between;
+    .profile-photo__container-photo {
+      padding-bottom: 20px;
+      img {
+        --photo-size: 293px;
+        width: var(--photo-size);
+        height: var(--photo-size);
       }
     }
   }

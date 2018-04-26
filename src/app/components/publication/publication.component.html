@@ -1,21 +1,22 @@
-<article class="container__article-publication"  >
+<article class="container__article-publication">
   <!--cabecera de publicacion-->
   <header class="article-publication__header-publication">
     <div class="header-publication__perfil">
-      <div class="perfil__user-photo">
-        <img class="photo" [src]="getURLPhoto(publication.user.path_photo)"  alt="">
-      </div>
-      <div class="perfil__user-name">
+      <a class="perfil__user-photo" [routerLink]="['/user', publication.user.username]">
+        <img class="photo" [src]="getURLPhoto(publication.user.path_photo)" alt="">
+      </a>
+      <a class="perfil__user-name" [routerLink]="['/user', publication.user.username]">
         <h3>{{publication.user.username}}</h3>
-      </div>
+      </a>
     </div>
   </header>
   <!--cierre de cabecer de publicacion-->
   <div class="c"></div>
   <!--foto de publicacion -->
 
-  <a href="#"  style="width:640px" class="container-photo__link-img">
-    <img class="publication-photo__img" style="width:100%; height: auto" [src]="getURLPhoto(publication.photo.public_path)" alt="">
+  <a href="#" style="width:640px" class="container-photo__link-img">
+    <img class="publication-photo__img" style="width:100%; height: auto"
+         [src]="getURLPhoto(publication.photo.public_path)" alt="">
   </a>
 
 
@@ -58,7 +59,8 @@
           </div>
           <form class="ui reply form">
             <div class="field">
-              <textarea (keyup.enter)="commentPhoto()" #comment) class="textarea" placeholder="Escriba su comentario"></textarea>
+              <textarea (keyup.enter)="commentPhoto()" #comment) class="textarea"
+                        placeholder="Escriba su comentario"></textarea>
             </div>
           </form>
         </div>

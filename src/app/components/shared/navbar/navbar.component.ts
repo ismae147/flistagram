@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FlistagramService} from "../../../services/flistagram.service";
+import {UserService} from "../../../services/user.service";
 
 @Component({
   selector: 'app-navbar',
@@ -11,11 +11,11 @@ import {FlistagramService} from "../../../services/flistagram.service";
 export class NavbarComponent implements OnInit {
   entity;
 
-  constructor(public  _flistagramService: FlistagramService
+  constructor(public  _userService: UserService
   ) {
   }
 
   ngOnInit() {
-    this.entity = this._flistagramService.getIdentity();
+    this.entity = this._userService.getIdentity();
   }
 }

@@ -16,7 +16,7 @@ import {app_routing} from './app.routes';
 import {UploadPhotoComponent} from './components/upload-photo/upload-photo.component';
 import {SettingsComponent} from './components/settings/settings.component';
 import {EditProfileComponent} from './components/edit-profile/edit-profile.component';
-import {FlistagramService} from "./services/flistagram.service";
+import {UserService} from "./services/user.service";
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import {PublicationService} from "./services/publication.service";
@@ -46,7 +46,7 @@ import { PublicationComponent } from './components/publication/publication.compo
     FormsModule
   ],
   providers: [
-    FlistagramService, PublicationService
+    UserService, PublicationService
   ],
   bootstrap: [AppComponent]
 })

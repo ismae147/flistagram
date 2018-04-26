@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 import {User} from "../models/user";
 
 @Injectable()
-export class FlistagramService {
+export class UserService {
   identity: any;
   artistas: any[] = [];
   token: any;
@@ -49,6 +49,11 @@ export class FlistagramService {
       this.token = null;
     }
     return this.token;
+  }
+
+  profileByUsername(username: string) {
+    const url = `${this.urlFlistagramApi}/user/profile/${username}`;
+    return this.http.get(url, {headers: this.getHeaders()});
   }
 
 }

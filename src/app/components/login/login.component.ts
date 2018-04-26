@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 import {User} from "../../models/user";
-import {FlistagramService} from "../../services/flistagram.service";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,7 @@ import {FlistagramService} from "../../services/flistagram.service";
 export class LoginComponent implements OnInit {
   userLogin: User;
 
-  constructor(public  _flistagramService: FlistagramService) {
+  constructor(public  _flistagramService: UserService) {
     this.userLogin = new User();
   }
 
