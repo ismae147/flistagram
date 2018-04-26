@@ -16,7 +16,6 @@ import {app_routing} from './app.routes';
 import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
-import { LoginComponent } from './components/login/login.component';
 import {FlistagramService} from "./services/flistagram.service";
 
 @NgModule({
@@ -31,8 +30,6 @@ import {FlistagramService} from "./services/flistagram.service";
     UploadPhotoComponent,
     SettingsComponent,
     EditProfileComponent,
-    LoginComponent,
-    LoginComponent,
   ],
   imports: [
     BrowserModule,

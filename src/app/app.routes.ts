@@ -4,10 +4,8 @@ import {UserComponent} from "./components/user/user.component";
 import {UploadPhotoComponent} from './components/upload-photo/upload-photo.component';
 import {SettingsComponent} from './components/settings/settings.component';
 import {EditProfileComponent} from './components/edit-profile/edit-profile.component';
-import {LoginComponent} from './components/login/login.component';
 
 const APP_ROUTES: Routes = [
-  {path: "login", component: LoginComponent},
   {path: "home", component: HomeComponent},
   {path: "user/:id", component: UserComponent},
   {path: "user/upload/:id", component: UploadPhotoComponent},

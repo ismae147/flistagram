@@ -11,14 +11,6 @@ import {FlistagramService} from "../../services/flistagram.service";
   ]
 })
 export class UserComponent{
-  register = false;
-  userLogin: User;
-  userRegister: User;
-  constructor() {
-      public  _route: ActivatedRoute,
-      public  _router: Router,
-      public  _flistagramService: FlistagramService
-  }
 
 
 
