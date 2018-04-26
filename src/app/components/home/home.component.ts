@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(
     public _pulication: PublicationService
   ) {
-    this._pulication.timeLine().subscribe((data) => {
+    this._pulication.timeLine().subscribe((data: any) => {
       this.publications = data.item;
     }, (error) => {
       console.log(error);
@@ -25,7 +25,4 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
   }
-
-
-
 }
