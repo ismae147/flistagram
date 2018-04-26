@@ -13,23 +13,11 @@ import {UserComponent} from './components/user/user.component';
 import {ProfileTimeLinePhotoComponent} from './components/profile-time-line-photo/profile-time-line-photo.component';
 
 import {app_routing} from './app.routes';
-<<<<<<< HEAD
 import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { LoginComponent } from './components/login/login.component';
-import { AppComponentsLoginComponent } from './app-components-login/app-components-login.component';
-// services
-
-
-
-
-=======
-import {UploadPhotoComponent} from './components/upload-photo/upload-photo.component';
-import {SettingsComponent} from './components/settings/settings.component';
-import {EditProfileComponent} from './components/edit-profile/edit-profile.component';
-import {LoginComponent} from './components/login/login.component';
->>>>>>> df7518b6e84798229550a5b04fd0e4e1c6f3fc50
+import {FlistagramService} from "./services/flistagram.service";
 
 @NgModule({
   declarations: [
@@ -52,7 +40,9 @@ import {LoginComponent} from './components/login/login.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    FlistagramService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

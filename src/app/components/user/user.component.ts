@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {User} from "../../models/user";
+import {ActivatedRoute, Router} from "@angular/router";
+import {FlistagramService} from "../../services/flistagram.service";
 
 @Component({
   selector: 'app-user',
@@ -7,11 +10,16 @@ import { Component, OnInit } from '@angular/core';
     './user.styles.scss'
   ]
 })
-export class UserComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class UserComponent{
+  register = false;
+  userLogin: User;
+  userRegister: User;
+  constructor() {
+      public  _route: ActivatedRoute,
+      public  _router: Router,
+      public  _flistagramService: FlistagramService
   }
+
+
 
 }

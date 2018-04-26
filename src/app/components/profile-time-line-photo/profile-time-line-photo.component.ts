@@ -15,4 +15,6 @@ export class ProfileTimeLinePhotoComponent implements OnInit {
   ngOnInit() {
   }
 
+
+
 }
