@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {UserService} from "../../../services/user.service";
+import {User} from "../../../models/user";
 
 @Component({
   selector: 'app-navbar',
@@ -11,11 +12,11 @@ import {UserService} from "../../../services/user.service";
 export class NavbarComponent implements OnInit {
   entity;
   text;
+  users;
 
-
-  constructor(public  _userService: UserService
-  ) {
+  constructor(public  _userService: UserService) {
     this.text = "";
+    this.users = [];
   }
 
   ngOnInit() {
@@ -23,12 +24,16 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  buscarUsuario() {
+  searchUser() {
+    if (this.text.length === 0) {
+      return;
+    }
     this._userService.findUser(this.text).subscribe((data: any) => {
-        console.log(data);
+        this.users = data.item;
+      }, error => {
+        console.log(error);
       }
     );
   }
-
 
 }

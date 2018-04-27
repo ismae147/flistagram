@@ -9,6 +9,7 @@ export class UserService {
   artistas: any[] = [];
   token: any;
   urlFlistagramApi = 'http://localhost/flistagramAPI/api/v1';
+  users: any[];
 
   constructor(public http: HttpClient) {
     console.log('Servicio de flistagram listo');
@@ -56,9 +57,9 @@ export class UserService {
     return this.http.get(url, {headers: this.getHeaders()});
   }
 
-  findUser(text: string){
+  findUser(text: string) {
     const url = `${this.urlFlistagramApi}/user/find/${text}`;
-    return this.http.get(url,{headers: this.getHeaders()});
+    return this.http.get(url, {headers: this.getHeaders()});
   }
 
 }
