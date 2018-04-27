@@ -75,19 +75,36 @@
 
   &.publicationPage {
     display: flex;
+    max-width: 935px;
+    margin: 100px auto auto;
     .mainSection {
-      width: 70%;
+      width: calc(100% - 335px);
       max-width: inherit;
     }
     .article-publication__data-publication {
-      width: 30%;
+      width: 335px;
       margin-top: 60px;
     }
+
+    .article-publication__header-publication {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 335px;
+    }
+
     @media (max-width: 768px) {
       display: block;
+      .mainSection {
+        width: 100%;
+      }
       .article-publication__data-publication {
         width: auto;
         margin-top: 0;
+      }
+      .article-publication__header-publication {
+        position: static;
+        width: auto;
       }
     }
   }

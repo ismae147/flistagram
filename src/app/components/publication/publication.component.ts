@@ -30,11 +30,11 @@ export class PublicationComponent implements OnInit {
 
   commentPhoto(commentForm) {
     if (this.commentObj.text.trim() !== "") {
-      this._publicationService.commentPhotoService(this.commentObj, this.publication.id_publication).subscribe((data) => {
+      this._publicationService.commentPhotoService(this.commentObj, this.publication.id_publication).subscribe((data: any) => {
         if (data.status) {
-          this._publicationService.publicationById(this.publication.id_publication).subscribe((data: any) => {
-            console.log(data);
-            this.publication = data.item;
+          this._publicationService.publicationById(this.publication.id_publication).subscribe((d: any) => {
+            console.log(d);
+            this.publication = d.item;
             this.commentObj.text = "";
           }, error => {
             this.publication = null;
