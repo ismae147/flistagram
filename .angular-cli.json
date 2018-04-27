@@ -19,12 +19,10 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "assets/css/ionicons.css",
-        "../node_modules/croppie/croppie.css"
+        "assets/css/ionicons.css"
       ],
       "scripts": [
-        "assets/js/jquery.min.js",
+        "../node_modules/jquery/dist/jquery.min.js",
         "assets/js/semantic.min.js"
       ],
       "environmentSource": "environments/environment.ts",

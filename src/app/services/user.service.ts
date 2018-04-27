@@ -2,13 +2,14 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import 'rxjs/add/operator/map';
 import {User} from "../models/user";
+import {Publication} from "../models/publication";
+import {GLOBAL} from "../global";
 
 @Injectable()
 export class UserService {
   identity: any;
-  artistas: any[] = [];
   token: any;
-  urlFlistagramApi = 'http://localhost/flistagramAPI/api/v1';
+  urlFlistagramApi = GLOBAL.urlAPI + GLOBAL.apiVersion;
   users: any[];
 
   constructor(public http: HttpClient) {
@@ -42,24 +43,20 @@ export class UserService {
     return this.identity;
   }
 
-  getToken() {
-    const token = localStorage.getItem('token');
-    if (token !== "undefined") {
-      this.token = token;
-    } else {
-      this.token = null;
-    }
-    return this.token;
-  }
-
   profileByUsername(username: string) {
     const url = `${this.urlFlistagramApi}/user/profile/${username}`;
     return this.http.get(url, {headers: this.getHeaders()});
   }
 
-  findUser(text: string) {
-    const url = `${this.urlFlistagramApi}/user/find/${text}`;
-    return this.http.get(url, {headers: this.getHeaders()});
+  uploadProfilePhoto(dataBase64Photo: string) {
+    const url = `${this.urlFlistagramApi}/user/profile/photo`;
+    return this.http.post(url, {
+      'dataBase64Photo': dataBase64Photo
+    }, {headers: this.getHeaders()});
   }
 
+  getUrlFindUser(): string{
+    const url = `${this.urlFlistagramApi}/user/find/{query}`;
+    return url;
+  }
 }

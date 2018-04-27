@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
       }
     }, error => {
       console.log(error);
+      alert('Usuario o contgraseña son incorrectos');
     });
   }
 

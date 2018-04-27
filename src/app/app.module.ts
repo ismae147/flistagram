@@ -24,6 +24,7 @@ import {PublicationComponent} from './components/publication/publication.compone
 import {PublicationPageComponent} from './components/publication-page/publication-page.component';
 
 import {WindowRefService} from "./services/windowReference.service";
+import {UsersComponent} from './components/users/users.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import {WindowRefService} from "./services/windowReference.service";
     RegisterComponent,
     PublicationComponent,
     PublicationPageComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,

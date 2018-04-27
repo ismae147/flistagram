@@ -6,20 +6,9 @@
 
       </div>
     </div>
-    <div class="column">
-      <div class="ui icon input">
-        <i class="ion-ios-search icon"></i>
-        <input type="text" (keyup)="searchUser() " name="text" placeholder="Buscar..." [(ngModel)]="text">
-
-      </div>
-      <ul>
-        <li *ngFor="let user of users">{{ user.username}}</li>
-      </ul>
-      <p *ngIf="text.length>1">{{text}}</p>
-    </div>
     <div class="column links">
       <a [routerLink]="['/user', entity.username]"><i class="ion-ios-person-outline"></i></a>
+      <a [routerLink]="['/users']"><i class="ion-ios-people-outline"></i></a>
     </div>
   </div>
-
 </div>

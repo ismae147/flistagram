@@ -1,3 +1,4 @@
 export const GLOBAL: any = {
-  urlAPI : 'http://localhost/flistagramApi',
+  urlAPI : 'http://localhost/flistagramAPI',
+  apiVersion : '/api/v1',
 }

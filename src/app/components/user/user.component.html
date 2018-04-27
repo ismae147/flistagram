@@ -2,16 +2,19 @@
   <div class="main__container" *ngIf="profile">
     <header class="container__user-container">
       <div class="user-container__photo-container">
-        <div class="photo-container__img-container">
-          <img *ngIf="profile.path_photo !== '' " [src]="getURLPhoto(profile.path_photo)" alt="" class="photo-avatar">
-        </div>
+        <label for="myPhoto" class="photo-container__img-container">
+          <img #myProfilePhoto [src]="getURLPhoto(profile.path_photo)" alt=""
+               class="photo-avatar">
+        </label>
+        <input type="file" id="myPhoto" accept="image/jpeg" style="display: none;"
+               (change)="handleFileSelect($event)">
       </div>
       <div class="user-container__data-user">
         <div class="data-user__id">
           <div class="name-user">
             <p>{{profile.username}}</p>
           </div>
-          <div class="ui button" *ngIf="!isUserLoggedProfile" (click)="follow()"> Seguir</div>
+          <!--<div class="ui button" *ngIf="!isUserLoggedProfile" (click)="follow()"> Seguir</div>-->
           <div class="ui button" *ngIf="isUserLoggedProfile" (click)="logout()"> Cerrar Sesión</div>
         </div>
         <ul class="data-user__data-items">
@@ -27,7 +30,7 @@
         </ul>
         <div class="data-user__full-name" *ngIf="isUserLoggedProfile">
           <h3>{{profile.name}}</h3>
-          <a [routerLink]="['/user','upload',3]" class="ui button button-animate"> <strong>Nueva Publicación</strong>
+          <a [routerLink]="['/user','upload',3]" class="ui button"> <strong>Nueva Publicación</strong>
           </a>
         </div>
       </div>

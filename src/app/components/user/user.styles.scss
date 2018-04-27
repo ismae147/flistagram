@@ -36,9 +36,10 @@
         .data-user__id {
           padding-bottom: 20px;
           display: flex;
+          align-items: center;
+          justify-content: space-between;
           .name-user {
             width: 250px;
-
           }
           .buttons {
             width: calc(100% - 250px);
@@ -101,15 +102,17 @@
 
 .profile_photo {
   .profile-photo__container-row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
     .profile-photo__container-photo {
-      padding-bottom: 20px;
-      img {
-        --photo-size: 293px;
-        width: var(--photo-size);
-        height: var(--photo-size);
+      display: flex;
+      align-items: center;
+      a {
+        display: block;
+        img {
+          width: 100%;
+        }
       }
     }
   }
