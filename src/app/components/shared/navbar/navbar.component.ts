@@ -10,12 +10,25 @@ import {UserService} from "../../../services/user.service";
 })
 export class NavbarComponent implements OnInit {
   entity;
+  text;
+
 
   constructor(public  _userService: UserService
   ) {
+    this.text = "";
   }
 
   ngOnInit() {
     this.entity = this._userService.getIdentity();
   }
+
+
+  buscarUsuario() {
+    this._userService.findUser(this.text).subscribe((data: any) => {
+        console.log(data);
+      }
+    );
+  }
+
+
 }

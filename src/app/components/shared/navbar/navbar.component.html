@@ -3,12 +3,14 @@
     <div class="column logo">
       <div class="logo__container">
         <a [routerLink]="['home']"> Flistagram</a>
+
       </div>
     </div>
     <div class="column">
       <div class="ui icon input">
         <i class="ion-ios-search icon"></i>
-        <input type="text" placeholder="Buscar...">
+        <input type="text" name="text" placeholder="Buscar..." [(ngModel)]="text">
+        <p>{{text}}</p>
       </div>
     </div>
     <div class="column links">

@@ -23,8 +23,8 @@ import {PublicationService} from "./services/publication.service";
 import {PublicationComponent} from './components/publication/publication.component';
 import {PublicationPageComponent} from './components/publication-page/publication-page.component';
 
-import {CroppieModule} from 'angular-croppie-module';
 import {WindowRefService} from "./services/windowReference.service";
+
 
 @NgModule({
   declarations: [
@@ -44,7 +44,6 @@ import {WindowRefService} from "./services/windowReference.service";
     PublicationPageComponent,
   ],
   imports: [
-    CroppieModule,
     BrowserModule,
     app_routing,
     HttpClientModule,

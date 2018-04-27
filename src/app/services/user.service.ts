@@ -56,4 +56,9 @@ export class UserService {
     return this.http.get(url, {headers: this.getHeaders()});
   }
 
+  findUser(text: string){
+    const url = `${this.urlFlistagramApi}/user/find/${text}`;
+    return this.http.get(url,{headers: this.getHeaders()});
+  }
+
 }
