@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import {User} from "../models/user";
 import {Publication} from "../models/publication";
 import {GLOBAL} from "../global";
+import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class UserService {
@@ -55,8 +56,18 @@ export class UserService {
     }, {headers: this.getHeaders()});
   }
 
-  getUrlFindUser(): string{
-    const url = `${this.urlFlistagramApi}/user/find/{query}`;
-    return url;
+  getAllUsers() {
+    const url = `${this.urlFlistagramApi}/user/all`;
+    return this.http.get(url, {headers: this.getHeaders()});
+  }
+
+  addFollow(id_to_follow: string) {
+    const url = `${this.urlFlistagramApi}/follow/add/${id_to_follow}`;
+    return this.http.post(url, {}, {headers: this.getHeaders()});
+  }
+
+  removeFollow(id_to_follow: string) {
+    const url = `${this.urlFlistagramApi}/follow/remove/${id_to_follow}`;
+    return this.http.post(url, {}, {headers: this.getHeaders()});
   }
 }

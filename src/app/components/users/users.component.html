@@ -1,3 +1,30 @@
-<p>
-  users works!
-</p>
+<div class="usersPage">
+
+  <div class="usersPage__title">
+    Usuarios Registrados
+  </div>
+
+  <div class="usersPage__container">
+    <div class="user" *ngFor="let user of users">
+      <div class="user__data">
+        <a class="user__avatar" [routerLink]="['/user', user.username]">
+          <img *ngIf="user.path_photo !== '' " class="avatar" [src]="getURLPhoto(user.path_photo)" [alt]="user.name">
+        </a>
+        <a class="info" [routerLink]="['/user', user.username]">
+          <span class="info__username">{{ user.username }}</span>
+          <span class="info__name">{{ user.name }}</span>
+        </a>
+      </div>
+      <span class="user__follow">
+        <div class="ui button" *ngIf="identity.id_user !== user.id_user"
+             (click)="follow(!user.i_follow_it, user.id_user)">
+            <span *ngIf="user.i_follow_it ">Siguiendo</span>
+            <span *ngIf="!user.i_follow_it ">Seguir</span>
+          </div>
+      </span>
+    </div>
+    <div class="message" *ngIf="users.length == 0">
+      Cargando...
+    </div>
+  </div>
+</div>

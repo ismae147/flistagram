@@ -6,6 +6,7 @@ export class User {
     public path_photo: string = "",
     public email: string = "",
     public password: string = "",
+    public i_follow_it: string = "",
   ) {
   }
 }

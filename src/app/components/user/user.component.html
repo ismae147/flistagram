@@ -14,7 +14,11 @@
           <div class="name-user">
             <p>{{profile.username}}</p>
           </div>
-          <!--<div class="ui button" *ngIf="!isUserLoggedProfile" (click)="follow()"> Seguir</div>-->
+          <div class="ui button" *ngIf="!isUserLoggedProfile"
+               (click)="follow(!profile.i_follow_it, profile.id_user)">
+            <span *ngIf="profile.i_follow_it ">Siguiendo</span>
+            <span *ngIf="!profile.i_follow_it ">Seguir</span>
+          </div>
           <div class="ui button" *ngIf="isUserLoggedProfile" (click)="logout()"> Cerrar Sesión</div>
         </div>
         <ul class="data-user__data-items">
@@ -52,7 +56,7 @@
   </div>
 
   <div class="ui visible message" *ngIf="!profile">
-    <p> Ese usuario no existe
+    <p> Cargando
     </p>
   </div>
 </main>

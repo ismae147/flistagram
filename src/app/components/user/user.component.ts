@@ -31,6 +31,7 @@ export class UserComponent implements OnInit {
       this.username = paramsId.username;
       this._userService.profileByUsername(this.username).subscribe((data: any) => {
         this.profile = data.item;
+        this.profile.i_follow_it = data.i_follow_it;
         if (this.identity.username === this.profile.username) {
           this.isUserLoggedProfile = true;
         } else {
@@ -91,17 +92,30 @@ export class UserComponent implements OnInit {
     });
   }
 
-  /*follow() {
-    this._userService.profileByUsername(this.username).subscribe((data: any) => {
-      this.profile = data.item;
-      if (this.identity.username === this.profile.username) {
-        this.isUserLoggedProfile = true;
-      } else {
-        this.isUserLoggedProfile = false;
-      }
-    }, error => {
-      this.profile = null;
-      this.isUserLoggedProfile = false;
-    });
-  }*/
+  follow(futureStatus, id_user) {
+
+    if (futureStatus) {
+      this._userService.addFollow(id_user).subscribe((data: any) => {
+        this._userService.profileByUsername(this.username).subscribe((d: any) => {
+          this.profile = d.item;
+        }, error => {
+          this.profile = null;
+          this.isUserLoggedProfile = false;
+        });
+      }, error => {
+        alert('ERror');
+      });
+    } else {
+      this._userService.removeFollow(id_user).subscribe((data: any) => {
+        this._userService.profileByUsername(this.username).subscribe((d: any) => {
+          this.profile = d.item;
+        }, error => {
+          this.profile = null;
+          this.isUserLoggedProfile = false;
+        });
+      }, error => {
+        alert('ERror');
+      });
+    }
+  }
 }

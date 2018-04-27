@@ -18,11 +18,12 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmitRegister(registerForm) {
-    console.log(this.userRegister);
     this._flistagramService.createAccount(this.userRegister).subscribe((data: any) => {
+      console.log(data);
       if (data.status === true) {
+        localStorage.clear();
         localStorage.setItem('token', data.token);
-        localStorage.setItem('identity', JSON.stringify(data.user));
+        localStorage.setItem('identity', JSON.stringify(data.item));
         console.log(data);
       } else {
         alert('Usuario o contgraseña son incorrectos');
