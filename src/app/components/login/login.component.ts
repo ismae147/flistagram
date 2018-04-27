@@ -11,7 +11,7 @@ import {UserService} from "../../services/user.service";
 export class LoginComponent implements OnInit {
   userLogin: User;
 
-  constructor(public  _flistagramService: UserService) {
+  constructor(public  _userService: UserService) {
     this.userLogin = new User();
   }
 
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   onSubmitLogin(loginForm) {
     console.log(this.userLogin);
-    this._flistagramService.loginUser(this.userLogin).subscribe((data: any) => {
+    this._userService.loginUser(this.userLogin).subscribe((data: any) => {
       if (data.status === true) {
         localStorage.setItem('identity', JSON.stringify(data.user));
         localStorage.setItem('token', data.token);

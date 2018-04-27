@@ -1,44 +1,48 @@
 <main class="main">
   <div class="main__container">
-    <article class="container__article">
-      <div class="article__upload-photo">
-        <div class="txt-btn-new-publication">
-          <div class="txt-new-publication">
-            <h3>Nueva Publicación</h3>
+    <form #createPublicationForm="ngForm" (submit)="onSubmitCreatePublication(createPublicationForm)">
+      <article class="container__article">
+        <div class="article__upload-photo">
+          <div class="txt-btn-new-publication">
+            <div class="txt-new-publication">
+              <h3>Nueva Publicación</h3>
+            </div>
+            <div class="btn-new-publication">
+              <label class="ui button link_button" for="myPhoto">
+                <i class="ion-image icon-photo"></i>
+                Subir Foto
+              </label>
+              <input type="file" id="myPhoto" accept="image/jpeg" style="display: none;"
+                     (change)="handleFileSelect($event)">
+            </div>
           </div>
-          <div class="btn-new-publication">
-            <a class="ui button link_button">
-              <i class="ion-image icon-photo"></i>
-             Subir Foto
-            </a>
-          </div>
-        </div>
 
-        <div class="photo-container">
-          <div class="photo">
-            <img src="assets/images/uploadPhoto.png" class="img-upload" alt="">
+          <div class="photo-container">
+            <div class="photo">
+              <img src="assets/images/uploadPhoto.png" #imageUpload class="img-upload" alt="">
+            </div>
           </div>
-        </div>
 
-      </div>
-      <div class="article__info-photo">
-        <div class="ui form">
-          <div class="field">
-            <label>Comenta!!</label>
-            <textarea></textarea>
+        </div>
+        <div class="article__info-photo">
+          <div class="ui form">
+            <div class="field">
+              <label>Comenta!!</label>
+              <textarea name="description" #description="ngModel"
+                        [(ngModel)]="publication.description" required></textarea>
+            </div>
+            <div class="field">
+              <label>Ubicación</label>
+              <textarea required rows="2" name="location" #location="ngModel"
+                        [(ngModel)]="publication.location"></textarea>
+            </div>
           </div>
-          <div class="field">
-            <label>Ubicación</label>
-            <textarea rows="2"></textarea>
+          <div class="btn-comment-location">
+            <input value="Publicar" type="submit" class="ui button link_button">
           </div>
         </div>
-        <div class="btn-comment-location">
-          <a [routerLink]="['/user','upload',3]" class="ui button link_button">
-            <h4 class="change-photo">Publicar</h4>
-          </a>
-        </div>
-      </div>
-    </article>
+      </article>
+    </form>
   </div>
 
 </main>

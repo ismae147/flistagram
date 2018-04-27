@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "assets/css/ionicons.css"
+        "assets/css/ionicons.css",
+        "../node_modules/croppie/croppie.css"
       ],
       "scripts": [
         "assets/js/jquery.min.js",

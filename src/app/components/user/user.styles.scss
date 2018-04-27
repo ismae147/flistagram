@@ -103,6 +103,7 @@
   .profile-photo__container-row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .profile-photo__container-photo {
       padding-bottom: 20px;
       img {

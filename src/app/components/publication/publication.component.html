@@ -22,7 +22,8 @@
         <div class="likes-and-comments">
 
           <div class="like-container">
-            <i class="ion-android-favorite icon-size red-like"></i>
+            <i class="ion-android-favorite icon-size red-like"
+               [ngClass]="{'like': publication.i_like_it == true}" (click)="likeAction(!publication.i_like_it)"></i>
           </div>
 
           <div class="like-container icon-comments">
@@ -35,10 +36,11 @@
 
           <div class="many-likes">
             {{publication.likes.length}} me gusta
+            {{publication.comments.length}} comentarios
           </div>
 
         </div>
-
+  
         <!--COMMENTS-SEMANTIC-->
         <div class="ui comments">
           <div class="comment" *ngFor="let comment of publication.comments">
@@ -49,13 +51,14 @@
               </div>
             </div>
           </div>
-          <form class="ui reply form" #commentForm="ngForm">
-            <div class="field">
-              <textarea  (keyup.enter)="commentPhoto()" #text="ngModel" name="text" [(ngModel)]="commentObj.text" class="textarea"
-                        placeholder="Escriba su comentario"></textarea>
-            </div>
-          </form>
         </div>
+        <form class="ui reply form" #commentForm="ngForm">
+          <div class="field">
+              <textarea (keyup.enter)="commentPhoto()" #text="ngModel" name="text" [(ngModel)]="commentObj.text"
+                        class="textarea"
+                        placeholder="Escriba su comentario"></textarea>
+          </div>
+        </form>
       </div>
     </div>
   </footer>

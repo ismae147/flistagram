@@ -17,12 +17,14 @@ import {UploadPhotoComponent} from './components/upload-photo/upload-photo.compo
 import {SettingsComponent} from './components/settings/settings.component';
 import {EditProfileComponent} from './components/edit-profile/edit-profile.component';
 import {UserService} from "./services/user.service";
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
+import {LoginComponent} from './components/login/login.component';
+import {RegisterComponent} from './components/register/register.component';
 import {PublicationService} from "./services/publication.service";
-import { PublicationComponent } from './components/publication/publication.component';
-import { PublicationPageComponent } from './components/publication-page/publication-page.component';
+import {PublicationComponent} from './components/publication/publication.component';
+import {PublicationPageComponent} from './components/publication-page/publication-page.component';
 
+import {CroppieModule} from 'angular-croppie-module';
+import {WindowRefService} from "./services/windowReference.service";
 
 @NgModule({
   declarations: [
@@ -42,13 +44,14 @@ import { PublicationPageComponent } from './components/publication-page/publicat
     PublicationPageComponent,
   ],
   imports: [
+    CroppieModule,
     BrowserModule,
     app_routing,
     HttpClientModule,
     FormsModule
   ],
   providers: [
-    UserService, PublicationService
+    UserService, PublicationService, WindowRefService
   ],
   bootstrap: [AppComponent]
 })
