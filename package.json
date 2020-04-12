@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "angular-croppie-module": "0.0.7",
-    "auth0-js": "^9.5.0",
+    "auth0-js": "^9.13.2",
     "core-js": "^2.4.1",
     "croppie": "^2.6.2",
     "jquery": "^3.3.1",
